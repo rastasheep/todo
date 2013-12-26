@@ -21,3 +21,12 @@ func TestNewTaskEmptyTitle(t *testing.T) {
 		t.Errorf("task with empty title created")
 	}
 }
+
+func TestCloneTask(t *testing.T) {
+	task, _ := NewTask("my task")
+	task_copy := task.clone()
+	task.Done = true
+	if task_copy.Done {
+		t.Errorf("copy of task should not be done")
+	}
+}
