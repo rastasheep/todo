@@ -1,4 +1,4 @@
-package main
+package models
 
 import "fmt"
 
@@ -25,7 +25,7 @@ func (m *TaskManager) Add(task *Task) error {
 
 	_, found := m.Find(task.Id)
 	if found {
-		m.tasks[task.Id] = task.clone()
+		m.tasks[task.Id-1] = task
 		return nil
 	}
 
