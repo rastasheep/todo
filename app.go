@@ -8,6 +8,7 @@ import (
 
 func main() {
 	m := martini.Classic()
+   m.Use(martini.Static("views"))
 
 	m.Get("/tasks", GetTasks)
 	m.Post("/task", CreateTask)
