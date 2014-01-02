@@ -20,3 +20,7 @@ _cgo_export.*
 _testmain.go
 
 *.exe
+
+# Frontend stuff
+node_modules/*
+views/assets/javascripts/lib/*
